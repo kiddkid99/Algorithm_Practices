@@ -7,9 +7,13 @@ namespace Algorithm_Practices.UnitTests
     {
         [TestCase(0, 0)]
         [TestCase(1, 1)]
-        public void Fibonacii_WhenCalled_ReturnCorrect(int number, long expected)
+        [TestCase(5, 5)]
+        [TestCase(10, 55)]
+        [TestCase(40, 102334155)]
+        [TestCase(50, 12586269025)]
+        public void Fibonacii_WhenCalled_ReturnCorrect(int number, double expected)
         {
-            int result = Algorithm.Fibonacci(number);
+            double result = Algorithm.Fibonacci(number);
 
 
             Assert.AreEqual(result, expected);
