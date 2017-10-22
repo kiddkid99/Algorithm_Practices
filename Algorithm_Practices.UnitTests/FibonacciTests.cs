@@ -11,7 +11,7 @@ namespace Algorithm_Practices.UnitTests
         [TestCase(10, 55)]
         [TestCase(40, 102334155)]
         [TestCase(50, 12586269025)]
-        public void Fibonacii_WhenCalled_ReturnCorrect(int number, double expected)
+        public void Fibonacci_WhenCalled_ReturnCorrect(int number, double expected)
         {
             double result = Algorithm.Fibonacci(number);
 

@@ -13,17 +13,21 @@ namespace Algorithm_Practices
             //Use memoization
             //memorize previous value after cacualted
 
-            double a = 0;
-            double b = 1;
+            double result = 0;
+            double first = 0;
+            double second = 1;
 
-            for(int index = 0; index < number; index++)
+            if (number == 0) return 0;
+            if (number == 1) return 1;
+
+            for(int index = 2; index <= number; index++)
             {
-                double temp = a;
-                a = b;
-                b = temp + b;
+                result = first + second;
+                first = second;
+                second = result;
             }
 
-            return a;
+            return result;
         }
     }
 }
